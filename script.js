@@ -31,12 +31,12 @@ let perfectStreaks = parseInt(localStorage.getItem('pc_perfect')) || 0;
 let mistakesByCat = getSafeLocalStorage('pc_mistakes_cat', { affirmative: 0, negative: 0, interrogative: 0, short: 0, ing_spelling_errors: 0 });
 
 const themes = {
-    "cyberstream": { primary: "#FF007F", secondary: "#00F0FF", accent: "#9A00FF" }, // Lvl 1
-    "overdrive": { primary: "#00FF66", secondary: "#0D1B2A", accent: "#00FFCC" },   // Lvl 5
-    "hyperdrive": { primary: "#FF5E00", secondary: "#FF007F", accent: "#FFFF00" },  // Lvl 10
-    "quantumflux": { primary: "#A020F0", secondary: "#00FFD8", accent: "#FF0055" }, // Lvl 15
-    "on-air": { primary: "#FF3B30", secondary: "#FFD700", accent: "#00FF66" },      // Lvl 20
-    "supernova": { primary: "#FFFFFF", secondary: "#FF003C", accent: "#222222" }     // Lvl 25
+    "cyberstream": { primary: "#00FFCC", secondary: "#76FF03", accent: "#B000FF" }, // Lvl 1 (Cyan/Lime)
+    "overdrive": { primary: "#FFEA00", secondary: "#00E676", accent: "#FF3D00" },   // Lvl 5 (Jaune/Vert)
+    "hyperdrive": { primary: "#FF1744", secondary: "#00E5FF", accent: "#FFFF00" },  // Lvl 10 (Rouge/Cyan)
+    "quantumflux": { primary: "#D500F9", secondary: "#00E5FF", accent: "#00E676" }, // Lvl 15 (Violet/Cyan)
+    "on-air": { primary: "#FF3D00", secondary: "#FFFFFF", accent: "#FFEA00" },      // Lvl 20 (Alerte Rouge)
+    "supernova": { primary: "#FFFFFF", secondary: "#FF1744", accent: "#222222" }     // Lvl 25 (Monochrome)
 };
 
 const avatarList = [
