@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur d'icônes PWA Present Simple Mastery</title>
+</head>
+<body style="background:#111; color:#fff; font-family:sans-serif; text-align:center; padding:5px;">
+    <h2>Générateur d'icônes PWA d'exercice</h2>
+    <p>Cliquez sur chaque bouton pour télécharger les fichiers requis :</p>
+    <button onclick="generateIcon(192, 'icon-192.png')" style="padding:15px; margin:10px; font-weight:bold; cursor:pointer;">Télécharger icon-192.png</button>
+    <button onclick="generateIcon(512, 'icon-512.png')" style="padding:15px; margin:10px; font-weight:bold; cursor:pointer;">Télécharger icon-512.png</button>
+    <br><canvas id="canvas" style="display:none;"></canvas>
+
+    <script>
+        function generateIcon(size, filename) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = size;
+            canvas.height = size;
+
+            // Fond sombre du thème
+            ctx.fillStyle = '#0c0c10';
+            ctx.fillRect(0, 0, size, size);
+
+            // Effet de grille néon subtile
+            ctx.strokeStyle = 'rgba(30,144,255,0.15)';
+            ctx.lineWidth = size / 100;
+            for(let i = 0; i < size; i += size/8) {
+                ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, size); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(size, i); ctx.stroke();
+            }
+
+            // Cercle lumineux néon vert
+            ctx.strokeStyle = '#00FF85';
+            ctx.lineWidth = size / 24;
+            ctx.shadowColor = '#00FF85';
+            ctx.shadowBlur = size / 20;
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/3.2, 0, Math.PI * 2);
+            ctx.stroke();
+
+            // Texte "PS" au centre style Orbitron
+            ctx.shadowColor = '#1E90FF';
+            ctx.fillStyle = '#F4F4F6';
+            ctx.font = 'bold ' + (size / 3.8) + 'px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('PS', size/2, size/2);
+
+            // Lien de téléchargement automatique
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>
