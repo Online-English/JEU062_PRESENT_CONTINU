@@ -20,20 +20,20 @@
     
     <style>
         :root {
-            --bg: #030305;
-            --surface: #0c0c10;
-            --surface-input: #121218;
-            --primary: #FF007F; /* Rose Néon (Vaporwave) */
-            --secondary: #00F0FF; /* Cyan Électrique */
-            --accent: #9A00FF; /* Violet Quantum */
-            --error: #FF3B30; /* Rouge Éclair */
+            --bg: #020204;
+            --surface: #080a10;
+            --surface-input: #0e121a;
+            --primary: #00FFCC; /* Cyan Aqua (Flux de données) */
+            --secondary: #76FF03; /* Vert Lime Électrique (Live Feed) */
+            --accent: #B000FF; /* Violet Quantum */
+            --error: #FF3B30; /* Rouge Alerte */
             --text: #F4F4F6;
         }
         
         body { background-color: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; margin: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
         header { width: 100%; padding: 12px; text-align: center; background: var(--surface); border-bottom: 2px solid #1a1a24; display: flex; justify-content: space-around; align-items: center; box-sizing: border-box; }
-        header a { color: var(--primary); text-decoration: none; font-weight: bold; font-family: 'Orbitron'; font-size: 0.85rem; letter-spacing: 1px; text-shadow: 0 0 8px rgba(255, 0, 127, 0.3); }
-        .theme-tag { color: var(--secondary); font-family: 'Orbitron'; font-weight: 700; font-size: 0.8rem; margin-left: 3px; letter-spacing: 0.5px; }
+        header a { color: var(--primary); text-decoration: none; font-weight: bold; font-family: 'Orbitron'; font-size: 0.85rem; letter-spacing: 1px; text-shadow: 0 0 8px rgba(0, 255, 204, 0.3); }
+        .btn-main { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #000; border: none; min-height: 50px; padding: 12px; border-radius: 14px; font-weight: 700; cursor: pointer; width: 100%; font-size: 1.1rem; font-family: 'Orbitron'; margin-top: 10px; transition: 0.1s ease; box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2); }
         
         .nav-btn { background: none; border: 2px solid #2a2a38; color: var(--text); padding: 8px 14px; border-radius: 10px; cursor: pointer; font-family: 'Orbitron'; font-size: 0.7rem; font-weight: 700; transition: 0.2s ease; display: inline-flex; align-items: center; justify-content: center; }
         .nav-btn:hover { border-color: var(--primary); color: var(--primary); box-shadow: 0 0 10px rgba(0, 240, 255, 0.2); }
